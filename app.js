@@ -10,6 +10,7 @@ var answerBoxA = document.getElementById("ansA");
 var answerBoxB = document.getElementById("ansB");
 var answerBoxC = document.getElementById("ansC");
 var questionBox = document.getElementById("questionBox");
+var timeDisplay = document.getElementById("timeDisplay");
 
 var results = document.getElementById("results");
 var questionList = [
@@ -41,11 +42,23 @@ startButton.addEventListener("click",function (){
         var ansStringA = answerBoxA.append(questionList[0].answers.a);
         var ansStringB = answerBoxB.append(questionList[0].answers.b);
         var ansStringC = answerBoxC.append(questionList[0].answers.c);
+        var timez = timeDisplay.append(countz);
+        var countz = setInterval(function(){
+            timer++;
+            console.log(countz)
+        }, 300);
+        
+        
 
         console.log(questionList[0].question)
     }
     
- );   
+
+    
+    
+ ); 
+ 
+ 
 
    answerBoxA.addEventListener("click", function(){
         if (questionList.answers === true){
